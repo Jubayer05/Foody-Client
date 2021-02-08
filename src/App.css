@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.color-primary {
+  color: #a61212;
+}
+
+.font-primary {
+  font-size: 50px;
+}
+
+.primary-btn {
+  border: 1px solid #a61212;
+  color: #000000;
+  padding: 10px 30px;
+  transition: all .5s;
+}
+
+.primary-btn:hover {
+  background-color: #a61212;
+  color: #fff;
+  
+}
+
+.rightArrow-icon {
+  transition: transform .3s;
+}
+
+.primary-btn:hover .rightArrow-icon {
+  transform: translateX(10px);
+}
+
+.logo__main {
+    width: 100px;
+}
+
+a:hover {
+  text-decoration: none;
+}

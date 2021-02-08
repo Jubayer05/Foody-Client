@@ -1,0 +1,14 @@
+.service {
+    background-image: url(../../../image/food-932959_1920.jpg);
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.service__icon {
+    font-size: 40px;
+    color: #c99546;
+}

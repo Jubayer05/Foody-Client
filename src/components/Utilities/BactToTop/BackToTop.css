@@ -1,0 +1,7 @@
+.MuiToolbar-regular {
+ min-height: 0 !important; 
+}
+
+button {
+    outline: none !important;
+}

@@ -1,0 +1,8 @@
+.chevron {
+    outline: none;
+    opacity: 0;
+}
+
+.chevron:hover {
+    opacity: 1;
+}

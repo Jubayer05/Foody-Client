@@ -1,0 +1,52 @@
+.table__row {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #aaa;
+}
+.table__row--image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid rgb(236, 236, 236);
+}
+.table__row--icon {
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.table__row:hover .table__row--icon {
+    opacity: 1;
+}
+.table__iteration--container {
+    border: 1px solid rgb(136, 136, 136);
+    width: 70%;
+}
+.table__iteration--num {
+    margin: auto;
+}
+.table-iteration {
+    border-left: 1px solid #555;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 20px;
+    color: #555;
+    background-color: rgb(224, 224, 224);
+}
+.table-iteration-1 {
+    border-bottom: 1px solid #555;
+}
+
+.table__iteration--container .svg-inline--fa.fa-w-14 {
+    width: 1.05em;
+}
+.table__row--heading {
+    color: #777;
+    transition: all 0.2s;
+}
+.table__row--heading:hover {
+    color: #ff4081;;
+    cursor: pointer;
+}
+.table__row--price {
+    color: #ff4081;
+    font-weight: 700;
+}

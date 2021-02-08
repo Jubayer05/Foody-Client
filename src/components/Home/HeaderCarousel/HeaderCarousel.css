@@ -1,0 +1,10 @@
+.header__carousel--item {
+    margin-top: -115px;
+    z-index: -5;
+}
+
+.header__carousel--paper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}

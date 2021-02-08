@@ -1,0 +1,12 @@
+.navbar-main {
+    z-index: 1;
+}
+
+.nav-link{
+    font-weight: 500;
+    color: #000 !important;
+}
+.nav-link:hover {
+    font-weight: 500;
+    color: rgb(117, 117, 117) !important;
+}

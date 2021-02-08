@@ -1,0 +1,72 @@
+.footer {
+    background-image: url(../../../image/footer-bg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.footer__logo {
+    width: 120px;
+}
+
+.footer__text {
+    max-width: 700px;
+    margin: auto;
+}
+
+.underLine {
+    max-width: 350px;
+    height: 0.5px;
+    background-color: #fff;
+    margin: 30px auto;
+    position: relative;
+}
+
+.underLine::after, .underLine::before {
+   content: "";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: #fff;
+}
+.underLine::after {
+  top: -5px;
+  width: 120%;
+  left: -40px;
+}
+.underLine::before {
+    width: 80%;
+    top: 3px;
+    left: 36px;
+}
+.footer__content {
+    max-width: 660px;
+    margin: auto;
+}
+.footer__content--1 {
+    text-align: right;
+}
+.footer__content--2 {
+    text-align: left;
+}
+.footer__content--input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    color: #fff;
+    padding-left: 7px;
+}
+.sendIcon {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translateY(7px);
+}
+.footer ::placeholder {
+    color: #fff;
+}

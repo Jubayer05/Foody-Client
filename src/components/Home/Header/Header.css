@@ -1,0 +1,23 @@
+.header {
+    background-image: url(../../../image/food-932959_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100%;
+}
+
+.header__logo {
+    width: 80px;
+}
+
+.header__heading {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    
+}
