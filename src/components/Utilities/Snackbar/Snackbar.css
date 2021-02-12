@@ -1,0 +1,10 @@
+.MuiSnackbarContent-message {
+    display: none !important;
+}
+
+.MuiSnackbarContent-action {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}

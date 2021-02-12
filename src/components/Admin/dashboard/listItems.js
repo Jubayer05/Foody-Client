@@ -30,7 +30,7 @@ export const mainListItems = (
       </ListItem>
     </Link>
 
-    <Link to="/admin/orders">
+    <Link to="/adminPage/orderList">
       <ListItem button>
         <ListItemIcon>
           <ShoppingCartIcon />
@@ -39,7 +39,7 @@ export const mainListItems = (
       </ListItem>
     </Link>
 
-    <Link to="/admin/customers">
+    <Link to="/adminPage/customerList">
       <ListItem button>
         <ListItemIcon>
           <PeopleIcon />
@@ -48,7 +48,7 @@ export const mainListItems = (
       </ListItem>
     </Link>
 
-    <Link to="/admin/addFoodItem">
+    <Link to="/adminPage/addFoodItem">
       <ListItem button>
         <ListItemIcon>
           <BarChartIcon />
@@ -57,7 +57,7 @@ export const mainListItems = (
       </ListItem>
     </Link>
 
-    <Link to="/admin/addAdmin">
+    <Link to="/adminPage/addAdmin">
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../../Home/Navbar/Navbar';
 import FoodData from '../../../FakeData/FakeData';
 import "./Cart.css";
@@ -6,6 +6,7 @@ import CartItem from '../CartItem/CartItem';
 import { Button } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import { FoodyContext } from '../../../App';
 
 const theme = createMuiTheme({
     palette: {
@@ -18,7 +19,20 @@ const theme = createMuiTheme({
     }
   });
 const Cart = () => {
-    const data = FoodData;
+    const {Foody, FoodyUser} = useContext(FoodyContext);
+    const [foodCollection, setFoodCollection] = Foody;
+    const prices = [];
+    foodCollection.forEach(food => {
+        prices.push(food.price); 
+    })
+    const total = prices.reduce((a, b) => {
+        return a + b;
+    }, 0);
+    const tax = parseFloat((total * 0.08).toFixed(2));
+
+    const handleUpdateCart = () => {
+        console.log(total, prices);
+    }
     return (
         <ThemeProvider theme={theme}>
         <div className="container pb-5">
@@ -41,14 +55,14 @@ const Cart = () => {
                                 <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        
                             {
-                                data.map(item => <CartItem item={item} key={item.id}/>)
+                                foodCollection.map(item => <CartItem item={item} />)
                             }
-                        </tbody>
+                       
                     </table>
                     <div className="d-flex">
-                    <Button className="mt-4 ml-auto" style={{outline: 'none'}}
+                    <Button onClick={handleUpdateCart} className="mt-4 ml-auto" style={{outline: 'none'}}
                         variant="contained" color="primary">Update Cart</Button>
                     </div>
                 </div>
@@ -64,15 +78,15 @@ const Cart = () => {
                         <table className="w-100">
                             <tr className="cart__border">
                                 <th>Subtotal</th>
-                                <td className="text-right py-3">$100</td>
+                                <td className="text-right py-3">${total}</td>
                             </tr>
                             <tr className="cart__border">
                                 <th>State Tax</th>
-                                <td className="text-right py-3">$100</td>
+                                <td className="text-right py-3">${tax}</td>
                             </tr>
                             <tr className="cart__border">
                                 <th>Total</th>
-                                <td className="text-right py-3">$100</td>
+                                <td className="text-right py-3">${total + tax}</td>
                             </tr>
                         </table>
                         <Link to="/shipment" className="cart-link">

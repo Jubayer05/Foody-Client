@@ -55,12 +55,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DrawerComp = () => {
+const DrawerComp = ({colors}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+  console.log(colors)
     return (
       <Drawer
       variant="permanent"

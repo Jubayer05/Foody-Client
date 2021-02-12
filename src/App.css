@@ -37,6 +37,11 @@
     width: 100px;
 }
 
+a {
+  color: rgb(100, 100, 100);
+}
+
 a:hover {
+  color: gray;
   text-decoration: none;
 }

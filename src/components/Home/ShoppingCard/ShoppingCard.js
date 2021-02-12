@@ -1,10 +1,5 @@
 import React from 'react';
 import ShoppingCardItem from '../ShoppingCardItem/ShoppingCardItem';
-import image1 from '../../../image/batter-1239028_1920.jpg';
-import image2 from '../../../image/food-932959_1920.jpg';
-import image3 from '../../../image/louis-hansel-shotsoflouis-Nwo0eNAYYyA-unsplash.jpg';
-import image4 from '../../../image/pizza-1209748_1920.jpg';
-import image5 from '../../../image/pizza-1442946_1920.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -13,38 +8,50 @@ const ShoppingCard = () => {
     const ShoppingCard = [
         {
             id: 1,
-            image: image1,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 50,
+            quantity: 1,
+            title: "This the food heading 1",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         },
         {
             id: 2,
-            image: image2,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 50,
+            quantity: 2,
+            title: "This the food heading 2",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         },
         {
             id: 3,
-            image: image3,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 15,
+            quantity: 1,
+            title: "This the food heading 3",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         },
         {
             id: 4,
-            image: image4,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 25,
+            quantity: 1,
+            title: "This the food heading 4",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         },
         {
             id: 5,
-            image: image5,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 35,
+            quantity: 1,
+            title: "This the food heading 5",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         },
         {
             id: 6,
-            image: image3,
-            title: "This the food heading",
+            image: "https://i.ibb.co/0BKwnR8/Chef-1.png",
+            price: 45,
+            quantity: 1,
+            title: "This the food heading 6",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         }
     ]
@@ -53,7 +60,7 @@ const ShoppingCard = () => {
             <h2 className="text-center pt-5 pb-4 font-primary">Order Your <span className="color-primary"> Food</span></h2>
             <div className="row mx-auto">
                 {
-                    ShoppingCard.map(item => <ShoppingCardItem item={item}/>)
+                    ShoppingCard.map(item => <ShoppingCardItem item={item} key={item.id}/>)
                 }         
             </div>
             <Link to="/seeAllItem">

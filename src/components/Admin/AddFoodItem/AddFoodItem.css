@@ -1,0 +1,15 @@
+input[type="file"] {
+    display: none;
+}
+
+.upload-btn {
+    border: 1px solid #01b0f1;
+    border-radius: 5px;
+}
+
+.upload-img {
+    width: 50px;
+}
+.upload-text{
+    font-size: 18px;
+}
