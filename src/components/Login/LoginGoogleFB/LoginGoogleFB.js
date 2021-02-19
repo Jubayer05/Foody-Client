@@ -16,7 +16,7 @@ var provider = new firebase.auth.FacebookAuthProvider();
 const LoginGoogleFB = () => {
     const {FoodyUser} = useContext(FoodyContext);
     const [userInfo, setUserInfo] = FoodyUser;
-    console.log(userInfo)
+    
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
@@ -33,7 +33,7 @@ const LoginGoogleFB = () => {
             history.replace(from);
         }).catch((error) => {
             var errorMessage = error.message;
-            var credential = error.credential;
+            console.log(errorMessage);
         });
     }
 
@@ -45,26 +45,14 @@ const LoginGoogleFB = () => {
         .then((result) => {
             /** @type {firebase.auth.OAuthCredential} */
             var credential = result.credential;
-
-            // The signed-in user info.
             var user = result.user;
-
-            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-            var accessToken = credential.accessToken;
-
-            console.log(user, accessToken)
+            console.log(user);
+            setUserInfo({name: user.displayName, email: user.email});
             history.replace(from);
         })
         .catch((error) => {
-            // Handle Errors here.
-            var errorCode = error.code;
             var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-
-           console.log(email, errorMessage);
+            console.log(errorMessage);
         })
     }
     return (

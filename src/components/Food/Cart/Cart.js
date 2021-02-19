@@ -23,7 +23,7 @@ const Cart = () => {
     const [foodCollection, setFoodCollection] = Foody;
     const prices = [];
     foodCollection.forEach(food => {
-        prices.push(food.price); 
+        prices.push(food.price * food.quantity); 
     })
     const total = prices.reduce((a, b) => {
         return a + b;
@@ -57,7 +57,7 @@ const Cart = () => {
                         </thead>
                         
                             {
-                                foodCollection.map(item => <CartItem item={item} />)
+                                foodCollection.map(item => <CartItem item={item} key={item.id}/>)
                             }
                        
                     </table>

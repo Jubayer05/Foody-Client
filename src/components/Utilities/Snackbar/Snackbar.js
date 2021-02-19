@@ -26,9 +26,8 @@ const SimpleSnackbar = ({item}) => {
   const {Foody, FoodyUser} = useContext(FoodyContext);
   const [foodCollection, setFoodCollection] = Foody;
   const handleFoodData = () => {
-      // const newData =  {id: item.id, title: item.title, price: item.price, image: item.image, quantity: item.quantity};
-      // setFoodCollection([...foodCollection ,newData]);
-      console.log(foodCollection)
+    setFoodCollection([...foodCollection, item]);
+      console.log(item)
   }
     const [open, setOpen] = useState(false);
     const [transition, setTransition] = useState(undefined);

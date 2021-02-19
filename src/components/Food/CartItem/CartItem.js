@@ -12,20 +12,25 @@ const CartItem = ({item}) => {
 
     const itemData = foodCollection.find(food => food.id === item.id);
     const newItem = {...itemData, quantity: quantity};
-    console.log(newItem);
-
-    const foodIndex = foodCollection.indexOf(item);
-    foodCollection[foodIndex] = newItem;
+    
+    const objIdArr = foodCollection.map(food => food.id);
+    const foodIndex = objIdArr.indexOf(item.id);
+    console.log(foodCollection);
+    // foodCollection.map(obj => newItem.find(o => o.id === obj.id) || obj);
+    if(foodIndex !== -1) {
+        foodCollection[foodIndex] = newItem;
+        setFoodCollection(foodCollection);
+    }
 
     const handleDeleteItem = (e) => {
         const trashBtn = document.querySelector(".trashBtn").parentNode.parentNode.parentNode;
         trashBtn.removeChild(document.querySelector(".trashBtn").parentNode.parentNode);
         foodCollection.splice(foodIndex, 1);
     }
-    console.log(foodCollection, foodIndex);
+    // console.log(foodCollection[foodIndex].quantity === 3);
 
     const handleIncrease = () => {
-        if(quantity < 15) {
+        if(quantity < 5) {
             setQuantity(quantity + 1);
         }
     }

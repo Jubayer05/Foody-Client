@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ShoppingCardItem from '../ShoppingCardItem/ShoppingCardItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -54,13 +54,21 @@ const ShoppingCard = () => {
             title: "This the food heading 6",
             detail: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ex inventore iste corporis! Optio unde temporibus similique error consequatur?"
         }
-    ]
+    ];
+
+    const [allFood, setAllFood] = useState([]);
+    const onlyId = allFood.map(a => a.id);
+    const handleFoodData = (data) => {
+        setAllFood([...allFood, data]);
+    }
+    console.log(onlyId);
+    
     return (
         <div className="container text-center mt-3">
             <h2 className="text-center pt-5 pb-4 font-primary">Order Your <span className="color-primary"> Food</span></h2>
             <div className="row mx-auto">
                 {
-                    ShoppingCard.map(item => <ShoppingCardItem item={item} key={item.id}/>)
+                    ShoppingCard.map(item => <ShoppingCardItem item={item} handleFoodData={handleFoodData} key={item.id}/>)
                 }         
             </div>
             <Link to="/seeAllItem">
